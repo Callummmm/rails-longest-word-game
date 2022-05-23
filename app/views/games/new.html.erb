@@ -1,0 +1,24 @@
+<head>
+</head>
+<body>
+  <h1>New game</h1>
+  <ul class="first">
+    <li><%= @rand_letters[0] %></li>
+    <li><%= @rand_letters[1] %></li>
+    <li><%= @rand_letters[2] %></li>
+    <li><%= @rand_letters[3] %></li>
+    <li><%= @rand_letters[4] %></li>
+    <li><%= @rand_letters[5] %></li>
+    <li><%= @rand_letters[6] %></li>
+    <li><%= @rand_letters[7] %></li>
+    <li><%= @rand_letters[8] %></li>
+    <li><%= @rand_letters[9] %></li>
+  </ul>
+  <p>What is the longest word you can find?</p>
+  <form class="question_form" action="score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :rand_letters, @rand_letters %>
+    <input type="text" name='word'>
+    <input type="submit" value="Play">
+  </form>
+</body>
